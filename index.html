@@ -8,20 +8,33 @@
 </head>
 <body>
     <!-- Header and Styled Name -->
-    <header>
+    <!-- <header>
         <h1 class="name">Jean-Jacques Mwisa</h1>
         <p class="role">Full Stack Developer</p>
-    </header>
+    </header> -->
 
     <!-- Navigation Bar -->
-    <nav>
+    <!-- <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#recommendations">Recommendations</a></li>
         </ul>
-    </nav>
+    </nav> -->
+
+    <header class="main-header">
+        <h1 class="logo">Jean-Jacques Mwisa</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <!-- About Me Section -->
     <section id="about">
@@ -74,8 +87,20 @@
     <section id="recommendations">
         <h2>Recommendations</h2>
         <div id="recommendations-list">
-            <p>"Jean-Jacques is a diligent developer with a keen eye for detail." - A. Colleague</p>
-            <p>"Amazing skills in full-stack development!" - B. Client</p>
+            <div class="recommendation-card">
+                <div class="recommendation-icon">A.C</div>
+                <div class="recommendation-text">
+                    <p>"Jean-Jacques is a diligent developer with a keen eye for detail."</p>
+                    <span>- A. Colleague</span>
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <div class="recommendation-icon">B.C</div>
+                <div class="recommendation-text">
+                    <p>"Amazing skills in full-stack development!"</p>
+                    <span>- B. Client</span>
+                </div>
+            </div>
         </div>
         <form id="recommendation-form">
             <input type="text" placeholder="Enter a recommendation" required>
