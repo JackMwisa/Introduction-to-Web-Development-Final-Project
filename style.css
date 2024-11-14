@@ -1,60 +1,99 @@
-/* Basic Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Header and Name Styling */
+/* Global Styling */
+body {
+    /* background-color: #f5f7fa; */
+    background-color: #322b656b;
+    color: #333;
+    line-height: 1.6;
+    background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+}
+
+/* Header Styling */
+header {
+    padding: 1em;
+    text-align: center;
+    background-color: #1a2b4e;
+    color: #ffffff;
+}
+
 header .name {
-    font-size: 2em;
-    font-weight: bold;
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+header .role {
+    font-size: 1.2em;
+    color: #a2b9ff;
 }
 
 /* Navigation Styling */
 nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
-    justify-content: space-around;
     background-color: #333;
     padding: 1em;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
+nav ul li {
+    margin: 0 1.5em;
 }
 
 nav a:hover {
-    color: #FFD700;
-    font-style: italic;
+    color: #ffd700;
+    transform: scale(1.1);
 }
 
-/* About Me Section */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+/* Section Styling */
+section {
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #about img {
-    width: 150px;
+    display: block;
+    margin: 1em auto;
     border-radius: 50%;
+    width: 150px;
 }
 
-#about p {
-    margin-top: 1em;
-    font-size: 1em;
-    line-height: 1.5em;
+h2 {
+    color: #1a2b4e;
+    margin-bottom: 0.5em;
+    text-align: center;
 }
 
-/* Skills Section */
+/* Skills Styling */
 .skills-list {
     display: flex;
-    gap: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .skill {
     display: flex;
     align-items: center;
+    margin: 1em;
 }
 
 .skill img {
@@ -62,12 +101,77 @@ nav a:hover {
     margin-right: 10px;
 }
 
-/* Projects Section */
+/* Project Styling */
 .project {
+    margin: 1em 0;
+    padding: 1em;
+    border-left: 4px solid #1a2b4e;
+}
+
+/* Recommendations Styling */
+#recommendations-list p {
+    margin: 0.5em 0;
+    font-style: italic;
+    color: #555;
+}
+
+#recommendation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#recommendation-form input, #recommendation-form button {
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#recommendation-form button {
+    background-color: #1a2b4e;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#recommendation-form button:hover {
+    background-color: #ffd700;
+    color: #333;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #1a2b4e;
+    color: #ffffff;
+    padding: 2em 0;
+    text-align: center;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 1.2em;
     margin-bottom: 1em;
 }
 
-/* Recommendations */
-#recommendations-list {
-    margin-top: 1em;
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
+
+.social-media a img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+}
+
+/* Update Nav Links Hover Effect for Consistency */

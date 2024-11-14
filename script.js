@@ -1,23 +1,23 @@
-// Get form and recommendations list elements
+// Form and recommendations list
 const recommendationForm = document.getElementById('recommendation-form');
 const recommendationsList = document.getElementById('recommendations-list');
 
-// Add recommendation on form submit
+// Add recommendation on form submission
 recommendationForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents page reload
+    event.preventDefault();
 
-    // Get the recommendation text
+    // Get recommendation text
     const input = recommendationForm.querySelector('input');
     const recommendationText = input.value;
 
     // Create a new recommendation element
     const newRecommendation = document.createElement('p');
-    newRecommendation.textContent = recommendationText;
+    newRecommendation.textContent = `"${recommendationText}" - New Recommendation`;
     recommendationsList.appendChild(newRecommendation);
 
-    // Clear the input
+    // Clear input
     input.value = '';
 
-    // Display confirmation popup
+    // Show confirmation popup
     alert('Thank you for your recommendation!');
 });
